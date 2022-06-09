@@ -32,11 +32,9 @@ fileNames.forEach((filename) => {
 });
 
 // max: maximum slices
-// n: types of pizza
+// pizzasAmount: types of pizza
 // inputs: array (the number of slices in each type of pizza)
-const Solve = (max, n, inputs, filename) => {
-
-  let pizzasAmount = n;
+const Solve = (max, pizzasAmount, inputs, filename) => {
 
   let pizzas = inputs.reverse();
 
@@ -90,5 +88,5 @@ const Solve = (max, n, inputs, filename) => {
       }
     }
   }
-  console.log("Max Score: ", Math.max(...answers));
+  console.log(filename + "Max Score: ", Math.max(...answers));
 };
