@@ -73,11 +73,11 @@ const Solve = (max, pizzasAmount, inputs, filename) => {
   if (!solved) {
     for (let k = 0; k < stoppingPoints.length; k++) {
       for (l = stoppingPoints[k].startFrom;l < pizzasAmount; l++) {
-        let answer2 = stoppingPoints[k].answer + parseInt(pizzas[l]);
-        if (answer2 <= max) {
-          answers.push(answer2);
-          if (answer2 === max) {
-            answers = [answer2];
+        let answer = stoppingPoints[k].answer + parseInt(pizzas[l]);
+        if (answer <= max) {
+          answers.push(answer);
+          if (answer === max) {
+            answers = [answer];
             solved = true;
             break;
           }
